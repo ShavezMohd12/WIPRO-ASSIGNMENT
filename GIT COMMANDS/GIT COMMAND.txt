@@ -1,0 +1,71 @@
+Git commands
+
+-> ADDING
+--------------
+1->git add filename = it is used to add file in staging area using filename
+2->git add . = it is used to push all the files in staging area
+3->git add *.extention_name = it is used to add file using extention in staging area
+
+--------------------------------------------------------------------------------------------------
+->COMMIT
+--------------
+1->git commit -m "first commit" = this is used to push file into local repository
+
+----------------------------------------------------------------------------------------------------
+
+->PUSH
+-----------------
+1->git push origin branch_name = it is used to push the file into remote repository
+
+------------------------------------------------------------------------------------------------------
+
+->CLONNING
+-----------------
+1->git clone url = it is used to clone the repository from remote to local
+
+--------------------------------------------------------------------------------------------------------
+
+->PULL
+------------------
+1->git pull origin branch_name = it is used to pull any update from remote to local repository
+
+---------------------------------------------------------------------------------------------------------
+
+->BRANCHING
+--------------------
+1->git checkout -b branch_name = it is used to create and switch into the branch
+2->git checkout branch_name = it is used to switch to different branch
+3->git branch = it is used check current branch
+4->git branch -d branch_name = it is used to delete any branch
+5->git merge branch_name = it is used to merge current branch to given branch_name
+6->git rebase branch_name = it used to merge current branch to given branch
+
+-----------------------------------------------------------------------------------------------------------
+
+->RESET
+---------------
+1-> git reset filename = it is used to reset the commit form staging area to working area
+
+----------------------------------------------------------------------------------------------------------
+
+->STATUS
+--------------
+1->git status = it is used to get the status of directory
+
+-------------------------------------------------------------------------------------------------------
+
+->LOG
+------------
+1->git log --oneline = it is used to get the list of all commit history
+
+-----------------------------------------------------------------------------------------------------
+
+->INIT
+----------
+1->git init - it is used to initialize the git
+
+------------------------------------------------------------------------------------------------------
+
+->REMOTE
+-----------
+1->git remote add origin url = it is used to add a repository

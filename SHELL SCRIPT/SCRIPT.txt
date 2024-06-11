@@ -1,0 +1,111 @@
+Q-1 -> Printing hello world using script schell
+--------------------------------------------------
+>nano hello.sh
+
+#!/bin/bash
+
+echo "hello world"
+
+>chmod 777 hello.sh
+>./hello.sh
+
+
+--------------------------------------------------------------------------------------------------------------------
+
+Q-2-> ADDITION , MULTIPLICATION , SUBSTRACTION of 2 numbers?
+-----------------------------------------------------------
+
+>nano add.sh
+
+#!/bin/bash
+
+num=2
+num2=3
+
+add=$(($num+$num2))
+echo "$add"
+
+sub=$(($num-$num2))
+echo "$sub"
+
+mul=$(($num*$num2))
+echo "$mul"
+
+----------------------------------------------------------------------------------------------------------------------
+
+Q-3-> TAKING INPUT FROM THE USER 
+-------------------------------------------
+
+#!/bin/bash
+
+read num
+
+read -p "enter the second number " num2
+
+---------------------------------------------------------------------------------------------------------------------------
+
+Q-4-> USING IF STATEMENT
+------------------------------
+
+#!/bin/bash
+a=10
+b=20
+c=30
+
+if (( a>b & a>b ))
+then
+ echo "a is greater"
+elif (( b>a & b>c ))
+then 
+ echo "b is greater"
+fi
+
+---------------------------------------------------------------------------------------------------------------------------
+Q-5-> USING loop STATEMENT
+------------------------------
+
+#!/bin/bash
+
+for (( i=1; i<10; i++ ))
+do
+ echo "hello"
+done
+
+while [ $num>10 ]
+do
+ echo "hello"
+done
+
+until [ $num -le 10 ]
+do
+ echo "until"
+done
+
+---------------------------------------------------------------------------------------------------------------------------
+
+Q-6-> USING FILE OPERATOR
+------------------------------
+
+#!/bin/bash
+
+read -p "enter the file anme " filename
+
+if (( -e $filename ))
+then
+ echo "file exist"
+elif (( -x $filename ))
+then 
+ echo "execute is given"
+elif (( -w $filename ))
+then 
+ echo "write permission is given"
+elif (( -r $filename ))
+then 
+ echo "read permisiion is given"
+elif (( -d $filename ))
+then 
+ echo "directory is present"
+fi
+
+
+
