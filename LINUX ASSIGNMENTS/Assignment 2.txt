@@ -1,0 +1,26 @@
+WRITE A SCRIPT THAT READS NUMBERS FROM THE USER UNTIL THEY ENTER 0. THE SCRIPT SHOULD ALSO PRINT WHEATHER EACH NUMBER IS ODD OR EVEN
+
+>nano readnum.sh
+
+#!/bin/bash
+
+num=1
+while [ $num !=0 ]
+do
+ read -p "enter the number" num
+ if [ $num -eq 0 ]
+ then
+  echo ""
+ else
+  res=$(($num%2))
+  if [ $res -eq 0 ]
+  then
+   echo "it is even"
+  else
+   echo "it is odd"
+  fi
+ fi
+done
+
+>chmod 777 readnum.sh
+>./readnum.sh

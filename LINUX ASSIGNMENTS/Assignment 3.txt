@@ -1,0 +1,14 @@
+CREATE A FUNCTION THAT TAKES A FILENAME AND PRINTS THE NUM OF LINE IN THE FILE CALL TBIS FUNCTION FROM YOUR SCRIPT WITH DIFFERENT FILENAMES
+
+>nano printfile.sh
+
+#!/bin/bash
+
+readf()
+{
+ filename=$1
+ lines=$( wc -l $filename )
+ echo "$lines"
+}
+readf readnum.sh
+readf helloworld.sh
