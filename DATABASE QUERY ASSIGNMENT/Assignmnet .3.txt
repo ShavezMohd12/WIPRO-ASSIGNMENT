@@ -1,0 +1,6 @@
+Assignment 3: Write a SELECT query to retrieve all columns from a 'customers' table, and modify it to return only the customer name and email address for customers in a specific city.
+========================================================================================================================================================================================
+
+SELECT * FROM CUSTOMER;
+
+SELECT NAME,EMAIL FROM CUSTOMER WHERE CITY='XYZ';

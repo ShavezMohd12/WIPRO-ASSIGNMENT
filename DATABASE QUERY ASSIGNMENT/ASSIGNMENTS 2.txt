@@ -1,0 +1,66 @@
+Assignment 2: Design a database schema for a library system, including tables, fields, and constraints like NOT NULL, UNIQUE, and CHECK. Include primary and foreign keys to establish relationships between tables.
+======================================================================================================================================================================================================================
+
+CREATE TABLE BOOKS
+(
+ ID NUMBER(10) PRIMARY KEY,
+ NAME VARCHAR2(30) NOT NULL UNIQUE,
+ AUTHOR VARCHAR(30) NOT NULL,
+)
+------------------------------
+| ID   | NAME  |  AUTHOR     |
+|----------------------------|
+|     |       |              |
+|     |       |              |  
+-----------------------------                   
+
+CREATE TABLE ISSUE_TO
+(
+ ID NUMBER(10) PRIMARY KEY,
+ NAME VARCHAR2(30) NOT NULL,
+ BOOKID NUMBER(10),
+ CONSTRAINT fk1 FOREIGN KEY(BOOKID) REFERENCES BOOKS(ID)
+)
+
+------------------------------
+| ID   | NAME  |  BOOKID     |
+|----------------------------|
+|     |       |              |
+|     |       |              |  
+-----------------------------    
+
+
+INSERT INTO BOOKS VALUES (211,'PHYSICS','A')
+INSERT INTO BOOKS VALUES (212,'COMPUTER','B')
+INSERT INTO BOOKS VALUES (213,'MATHS','C')
+INSERT INTO BOOKS VALUES (214,'ENGLISH','D')
+
+------------------------------
+| ID   | NAME  |  AUTHOR     |
+|----------------------------|
+| 211 | PHYSICS  | A         |
+| 212 | COMPUTER | B         |
+| 213 | MATHS    | C         |
+| 214 | ENGLISH  | D         |  
+----------------------------- 
+
+INSERT INTO BOOKS VALUES (1,'RAHUL',211)
+INSERT INTO BOOKS VALUES (2,'AJAY',212)
+INSERT INTO BOOKS VALUES (3,'VINEET',211)
+INSERT INTO BOOKS VALUES (4,'AROHI',213)
+
+------------------------------
+| ID| NAME  |  BOOKID      |
+|--------------------------|
+| 1 | RAHUL  | 211         |
+| 2 | AJAY   | 212         |
+| 3 | VINEET | 211         |
+| 4 | AROHI  | 213         |  
+-----------------------------
+ 
+
+
+
+
+
+ 
